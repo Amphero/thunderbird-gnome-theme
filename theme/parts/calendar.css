@@ -157,10 +157,14 @@ calendar-minimonth {
 	padding: 0 !important;
 }
 
+/* The list header and the rows below it follow the folder tree: 34px tall,
+ * inset by the toolbar padding and rounded at the button radius. They were
+ * 36px and 40px, square to the pane edge and rounded at 6px. */
 #calendarListHeader {
-	border-radius: 6px !important;
-	margin: 0 6px !important;
-	padding: 9px !important;
+	border-radius: var(--gnome-button-radius) !important;
+	margin: 0 var(--gnome-toolbar-padding) !important;
+	min-height: var(--gnome-button-size) !important;
+	padding: 0 9px !important;
 }
 #calendarListHeader:hover {
 	background-color: var(--gnome-hover-color) !important;
@@ -175,12 +179,13 @@ calendar-minimonth {
 }
 
 #calendar-list {
-	padding: 0 6px !important;
+	padding: 0 !important;
 }
 #calendar-list > li {
-	border-radius: 6px !important;
-	margin: 2px 0 !important;
-	padding: 3px 9px !important;
+	border-radius: var(--gnome-button-radius) !important;
+	margin: 1px var(--gnome-toolbar-padding) !important;
+	min-height: var(--gnome-button-size) !important;
+	padding: 0 9px !important;
 }
 #calendar-list > li:not(.selected):hover {
 	background-color: var(--gnome-hover-color) !important;
@@ -188,7 +193,7 @@ calendar-minimonth {
 #calendar-list > li.selected,
 #calendar-list:focus-within > li.selected {
 	appearance: none !important;
-	background-color: var(--gnome-selected-color) !important;
+	background-color: var(--gnome-active-color) !important;
 	color: inherit !important;
 }
 
@@ -201,11 +206,17 @@ calendar-minimonth {
 #calendar-list > li > button.calendar-enable-button {
 	background-color: var(--gnome-button-background) !important;
 	border: 0 !important;
-	padding: 6px 9px !important;
+	border-radius: var(--gnome-button-radius) !important;
+	min-height: 26px !important;
+	padding: 0 9px !important;
 	/* Thunderbird writes this button in --selected-item-text-color, which
 	 * belongs on the accent. The row behind it carries a neutral tint here,
 	 * so the label was white on a light surface. */
 	color: var(--gnome-window-color) !important;
+	/* ... and sets it in 11px uppercase with letter spacing. */
+	font-size: inherit !important;
+	letter-spacing: normal !important;
+	text-transform: none !important;
 }
 #calendar-list > li > button.calendar-enable-button:hover {
 	background-color: var(--gnome-button-hover-background) !important;
@@ -317,4 +328,19 @@ calendar-header-container,
 #calendar-view-splitter,
 #calendar-task-view-splitter {
 	border-block-start: 0 !important;
+}
+
+/* Events */
+
+/* An event is drawn as a block with 2px corners sitting hard against the grid
+ * line. .calendar-color-box is the shared class of the event in the day, week
+ * and month views; give it the radius the rest of the theme uses and move the
+ * label off the rounded corner. */
+.calendar-color-box {
+	border-radius: var(--gnome-button-radius) !important;
+}
+calendar-month-day-box-item.calendar-color-box,
+calendar-editable-item.calendar-color-box,
+calendar-event-box .calendar-item-flex {
+	padding-inline: 9px !important;
 }

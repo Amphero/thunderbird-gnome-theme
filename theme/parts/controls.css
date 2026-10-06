@@ -121,15 +121,17 @@ button.calview-toggle-item:not([disabled="true"]):is(:active, [aria-selected="tr
 		background: var(--gnome-selected-active-color) !important;
 	}
 }
-/* Tree column headers */
-/* Trees still wear the platform header: a filled bar, a grey line before every
- * column and a second one under the row, all in ThreeDLightShadow, which sat
- * next to the window's own dividers in a different colour. */
+/* Trees */
+/* Nothing here was themed, so the calendar's event list and the task list came
+ * straight from the platform. The header was a filled bar with a
+ * ThreeDLightShadow line before every column and another under the row; a
+ * GNOME column header has no line between the columns, only the one that
+ * parts it from the list. */
 treecol,
 treecolpicker,
 .tree-columnpicker-button {
 	background-color: transparent !important;
-	border-inline-start-color: var(--gnome-headerbar-shade-color) !important;
+	border-inline-start: 0 !important;
 	box-shadow: inset 0 -1px var(--gnome-headerbar-shade-color) !important;
 	color: var(--gnome-window-color) !important;
 
@@ -140,6 +142,28 @@ treecolpicker,
 	&:where(:hover:active) {
 		background-color: var(--gnome-active-color) !important;
 	}
+}
+.treecol-text {
+	opacity: 0.7 !important;
+}
+
+tree {
+	background-color: var(--gnome-view-background) !important;
+	color: var(--gnome-view-color) !important;
+}
+/* No height here: a tree measures its own row and sizes the box from it, so
+ * forcing one makes the pane above the calendar view jump by the difference. */
+treechildren::-moz-tree-row {
+	border-radius: var(--gnome-button-radius) !important;
+}
+treechildren::-moz-tree-row(hover) {
+	background-color: var(--gnome-hover-color) !important;
+}
+treechildren::-moz-tree-row(selected) {
+	background-color: var(--gnome-active-color) !important;
+}
+treechildren::-moz-tree-cell-text(selected) {
+	color: inherit !important;
 }
 
 /* The sort indicator and the column picker are addressed by URL, not through
