@@ -149,28 +149,18 @@ calendar-minimonth {
 	padding: 0 !important;
 }
 
-#calendarListHeader,
-checkbox.treenode-checkbox {
+#calendarListHeader {
 	border-radius: 6px !important;
 	margin: 0 6px !important;
 	padding: 9px !important;
 }
-#calendarListHeader:hover,
-checkbox.treenode-checkbox:hover {
+#calendarListHeader:hover {
 	background-color: var(--gnome-hover-color) !important;
 }
-#calendarListHeader > span,
-checkbox.treenode-checkbox > .checkbox-label-box > label {
+#calendarListHeader > span {
 	font-size: 9pt !important;
 	font-weight: bold !important;
 	opacity: .55 !important;
-}
-checkbox.treenode-checkbox > .checkbox-label-box {
-	margin: 0 !important;
-}
-checkbox.treenode-checkbox > .checkbox-check {
-	margin: 0 !important;
-	order: 2 !important;
 }
 #task-tree-filtergroup {
 	padding: 6px 9px !important;	

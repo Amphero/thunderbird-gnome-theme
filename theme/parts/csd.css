@@ -100,11 +100,6 @@
 	display: inherit !important;
 }
 
-/* Remove tabsbar titlebar blank spaces */
-:root[customtitlebar] #TabsToolbar .titlebar-placeholder {
-	display: none !important;
-}
-
 /* Prevent menubar from breaking */
 :root[customtitlebar] #toolbar-menubar:not([inactive=true]) {
 	height: 30px !important;

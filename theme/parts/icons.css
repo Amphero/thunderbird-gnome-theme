@@ -34,12 +34,11 @@ button.button-menu-list,
 .tree-columnpicker-button,
 .attachmentcol-column img, .attachment-icon,
 tr[data-properties~="tagged"] .tag-icon,
-[is="tree-view-table"] img:not(#threadColButton img, .tree-button-thread img),
+[is="tree-view-table"] img:not(.tree-button-thread img),
 tr[data-properties~="outgoing"] .correspondentcol-column:not(#hack),
 link[href="chrome://global/skin/dropmarker.css"] + image,
 .search-button-icon,
 .button-star,
-.textbox-search-sign,
 .textbox-search-clear,
 .subviewbutton-back,
 .PanelUI-subView .subviewbutton-nav::after,
@@ -51,7 +50,6 @@ link[href="chrome://global/skin/dropmarker.css"] + image,
 #calendarListHeader::after,
 #calendar-list > li[calendar-readonly]::before,
 #calendar-list > li[calendar-readonly]::after,
-checkbox.treenode-checkbox > .checkbox-check,
 #attachmentToggle,
 .nav-button > .toolbarbutton-icon,
 menupopup > menu::after,
@@ -74,7 +72,6 @@ menuitem[type="radio"][checked="true"] {
 .button:-moz-window-inactive,
 .search-button-icon:-moz-window-inactive,
 .button-star:-moz-window-inactive,
-.textbox-search-sign:-moz-window-inactive,
 .textbox-search-clear:-moz-window-inactive,
 .toolbarbutton-icon:-moz-window-inactive,
 .search-button-icon:-moz-window-inactive,
@@ -84,8 +81,7 @@ menuitem[type="radio"][checked="true"] {
 :root[customtitlebar] #titlebar .titlebar-buttonbox .titlebar-close:-moz-window-inactive .toolbarbutton-icon,
 :root[customtitlebar] #titlebar .titlebar-buttonbox .titlebar-max .toolbarbutton-icon:-moz-window-inactive,
 :root[customtitlebar] #titlebar .titlebar-buttonbox .titlebar-restore .toolbarbutton-icon:-moz-window-inactive,
-:root[customtitlebar] #titlebar .titlebar-buttonbox .titlebar-min .toolbarbutton-icon:-moz-window-inactive,
-:root[customtitlebar][sizemode="fullscreen"] #window-controls #restore-button .toolbarbutton-icon {
+:root[customtitlebar] #titlebar .titlebar-buttonbox .titlebar-min .toolbarbutton-icon:-moz-window-inactive {
 	fill-opacity: 0.8 !important;
 }
 
@@ -216,8 +212,6 @@ tr[data-properties~="junk"] .tree-button-spam > img:not(#hack) {
 }
 
 /* Dimmed icons */
-.searchbar-search-icon,
-.textbox-search-sign,
 .textbox-search-clear {
 	opacity: 0.7 !important;
 }
@@ -231,7 +225,6 @@ link[href="chrome://global/skin/dropmarker.css"] + image,
 #calendarListHeader::after,
 #calendar-list > li[calendar-readonly]::after,
 #calendar-list > li[calendar-readonly]::before,
-checkbox.treenode-checkbox > .checkbox-check,
 .twisty > .twisty-icon {
 	height: 16px !important;
 	width: 16px !important;
@@ -262,7 +255,6 @@ treechildren::-moz-tree-twisty(selected, focus),
 treechildren::-moz-tree-twisty(selected, focus, open),
 treechildren::-moz-tree-image(selected, focus),
 treechildren::-moz-tree-image(selected, focus, open),
-.item.client:focus .item-twisty-container,
 .sidebar-panel[lwt-sidebar-brighttext] .sidebar-placesTreechildren::-moz-tree-twisty,
 .sidebar-panel[lwt-sidebar-brighttext] .sidebar-placesTreechildren::-moz-tree-twisty(open) {
 	fill: #fff !important;
@@ -283,9 +275,6 @@ treechildren::-moz-tree-image(selected, focus, open),
 }
 :root[customtitlebar] #titlebar .titlebar-buttonbox .titlebar-min .toolbarbutton-icon {
 	list-style-image: var(--gnome-icon-window-minimize-symbolic) !important;
-}
-:root[customtitlebar][sizemode="fullscreen"] #window-controls #restore-button .toolbarbutton-icon {
-	list-style-image: var(--gnome-icon-view-restore-symbolic) !important;
 }
 
 /* Menu checkbox */
@@ -339,20 +328,13 @@ link[href="chrome://global/skin/dropmarker.css"] + image {
 }
 
 /* Tree views */
-treechildren::-moz-tree-twisty,
-.item.client .item-twisty-container {
+treechildren::-moz-tree-twisty {
 	list-style-image: var(--gnome-icon-pan-end-symbolic) !important;
 	width: 16px !important;
 	height: 16px !important;
 }
-.item.client .item-twisty-container {
-	background-image: var(--gnome-icon-pan-end-symbolic) !important;
-}
 treechildren::-moz-tree-twisty(open) {
 	list-style-image: var(--gnome-icon-pan-down-symbolic) !important;
-}
-.item.client.closed .item-twisty-container {
-	background-image: var(--gnome-icon-pan-down-symbolic) !important;
 }
 
 treechildren::-moz-tree-image(title, container),
@@ -378,14 +360,6 @@ treechildren::-moz-tree-image(query, OrganizerQuery_history____v) {
 }
 
 /* Search entries */
-.textbox-search-sign {
-	list-style-image: var(--gnome-icon-edit-find-symbolic) !important;
-}
-.textbox-search-sign {
-	margin: 3px 0;
-	max-height: 16px !important;
-	width: 16px !important;
-}
 /* Text clear */
 .textbox-search-clear {
 	list-style-image: var(--gnome-icon-edit-clear-symbolic) !important;
@@ -416,11 +390,6 @@ tr:not([data-properties~="flagged"]) .button-star {
 }
 
 /* Sidebar list headers */
-checkbox.treenode-checkbox > .checkbox-check {
-	background-image: var(--gnome-icon-pan-down-symbolic) !important;
-	opacity: .55 !important;
-	transform: rotate(0deg) !important;
-}
 #calendarListHeader > img {
 	visibility: collapse;
 }
@@ -429,8 +398,7 @@ checkbox.treenode-checkbox > .checkbox-check {
 	opacity: .55 !important;
 	transition: transform 150ms ease;
 }
-#calendarListHeader[checked="true"]::after,
-checkbox.treenode-checkbox[checked="true"] > .checkbox-check {
+#calendarListHeader[checked="true"]::after {
 	transform: rotate(-180deg) !important;
 }
 
