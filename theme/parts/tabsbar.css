@@ -84,7 +84,10 @@ tab {
 	border-color: transparent !important;
 }
 tab:not(:first-of-type, [selected], :hover) {
-	--gnome-tabbar-tab-separator-hack0: var(--gnome-tabbar-background);
+	/* The ends of the gradient have to let the bar through. Painting them in
+	 * the bar colour leaves two bright stubs as soon as the bar is a
+	 * different shade, for instance while the window is inactive. */
+	--gnome-tabbar-tab-separator-hack0: transparent;
 	--gnome-tabbar-tab-separator-hack1: linear-gradient(
 		to bottom,
 		var(--gnome-tabbar-tab-separator-hack0) 0,
