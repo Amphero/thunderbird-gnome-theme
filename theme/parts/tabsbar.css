@@ -120,7 +120,6 @@ tab:hover ~ tab[selected] ~ tab:not([hidden="true"]) ~ tab:not([hidden="true"]) 
 
 /* Tab labels */
 tab {
-	color: var(--gnome-toolbar-color) !important;
 	font-family: Cantarell, inherit;
 	font-weight: normal;
 	font-size: 1em;
@@ -205,8 +204,10 @@ tab:not(.tabmail-tab:first-child) .tab-icon-image {
 
 /* Close tab button */
 .tab-close-button {
-	content: url("../icons/window-close-symbolic.svg") !important;
-	fill: var(--gnome-toolbar-color) !important;
+	/* The file this pointed at is not in the tree, so the button stayed empty
+	 * whenever it was shown. The icon set has the symbol. */
+	content: var(--gnome-icon-window-close-symbolic) !important;
+	fill: var(--gnome-toolbar-icon-fill) !important;
 	fill-opacity: 1 !important;
 	-moz-context-properties: fill, fill-opacity !important;
 	height: 16px !important;

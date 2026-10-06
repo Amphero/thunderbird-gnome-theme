@@ -20,7 +20,6 @@ menupopup, panel, slot[part="content"] {
 /* Style menus */
 menupopup {
 	-moz-appearance: none !important;
-	color: var(--gnome-toolbar-color) !important;
 	padding: 8px !important;
 }
 
