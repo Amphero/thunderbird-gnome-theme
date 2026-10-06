@@ -48,7 +48,10 @@
 	--sidebar-background-color: var(--gnome-sidebar-background) !important;
 	--sidebar-border-color: var(--gnome-headerbar-shade-color) !important;
 
-	--viewBorderColor: color-mix(in srgb, currentColor 8%, transparent) !important;
+	/* currentColor made the grid lines change strength with every element's
+	 * text colour, so the heading row was drawn darker than the grid under
+	 * it. The window has one divider colour. */
+	--viewBorderColor: var(--gnome-headerbar-shade-color) !important;
 	--viewBackground: var(--gnome-view-background) !important;
 	--viewTodayBackground:  color-mix(in srgb, currentColor 8%, transparent) !important;
 	--viewTodayLabelBackground: var(--gnome-accent-bg) !important;
