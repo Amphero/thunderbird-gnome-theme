@@ -71,6 +71,94 @@ span#summarySubtitle {
 		background-color: var(--gnome-hover-color) !important;
 	}
 
+	/* Buttons and cards
+	 *
+	 * theme/parts/buttons.css never reaches this page either, so every button
+	 * kept the platform shape: a 1px border, 3px corners and the system fill.
+	 * The sections of a contact were off-white blocks with 3px corners on a
+	 * white pane, the opposite way round from a GNOME card. */
+	button {
+		background-color: var(--gnome-button-background) !important;
+		border: 0 !important;
+		border-radius: var(--gnome-button-radius) !important;
+		box-shadow: none !important;
+		color: var(--gnome-window-color) !important;
+		/* No size is forced here: the books pane header is 240px wide and fits
+		 * its three buttons exactly, so raising them to the theme's 34px cut
+		 * the label of "New Contact" off. The shape is what was wrong. */
+	}
+	button:hover {
+		background-color: var(--gnome-button-hover-background) !important;
+	}
+	button:active {
+		background-color: var(--gnome-button-active-background) !important;
+	}
+	button.button-flat:not(.button-primary) {
+		background-color: transparent !important;
+	}
+	button.button-flat:not(.button-primary):hover {
+		background-color: var(--gnome-hover-color) !important;
+	}
+	button.button-flat:not(.button-primary):active {
+		background-color: var(--gnome-active-color) !important;
+	}
+	button.button-primary,
+	button.button-primary:hover,
+	button.button-primary:active {
+		background-color: var(--gnome-button-suggested-background) !important;
+		color: white !important;
+	}
+	button.button-primary:not([disabled]):hover {
+		filter: brightness(110%);
+	}
+	button.button-primary:not([disabled]):active {
+		filter: brightness(120%);
+	}
+	button[disabled] {
+		opacity: 0.5 !important;
+	}
+
+	#detailsPane {
+		background-color: var(--gnome-window-background) !important;
+	}
+	#detailsPane section {
+		background-color: var(--gnome-card-background) !important;
+		border-radius: var(--gnome-card-radius) !important;
+		box-shadow: var(--gnome-card-shadow) !important;
+	}
+
+	/* Contact cards
+	 *
+	 * The card list is the same tree-view table as the message list, but this
+	 * is a content document, so none of those rules reach it: the cards kept
+	 * Thunderbird's white fill, a 1px border and 3px corners, packed against
+	 * each other with 2px of air. The declarations mirror the ones the message
+	 * list gets in theme/parts/mail.css. */
+	#cards tr.card-layout {
+		background: transparent !important;
+	}
+	#cards tr.card-layout > td {
+		padding: var(--gnome-toolbar-padding) !important;
+	}
+	#cards tr.card-layout:not(:first-child) > td {
+		padding-top: 0 !important;
+	}
+	#cards tr.card-layout .card-container {
+		background: none !important;
+		border: 0 !important;
+		border-radius: var(--gnome-button-radius) !important;
+		box-shadow: none !important;
+		/* Thunderbird only pads the card on the right, so the text sits on the
+		 * edge of the highlight. */
+		padding: var(--gnome-toolbar-padding) calc(var(--gnome-toolbar-padding) * 2) !important;
+	}
+	#cards tr.card-layout:not(.selected):hover .card-container {
+		background: var(--gnome-hover-color) !important;
+	}
+	#cards tr.card-layout.selected .card-container {
+		background: var(--gnome-active-color) !important;
+	}
+
 	/* Icons
 	 *
 	 * The address book takes every one of its icons from an --icon-* token, and
