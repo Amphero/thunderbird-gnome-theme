@@ -7,7 +7,7 @@
 .toolbarbutton-1,
 .toolbarbutton-1 > .toolbarbutton-menu-dropmarker,
 .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker,
-link[href="chrome://global/content/elements/moz-button.css"] + button[type~="icon"],
+link[href="chrome://global/content/elements/moz-button.css"] + button:has(> [type~="icon"]),
 link[href="chrome://global/content/elements/moz-message-bar.css"] + .container .icon,
 .preview-icon,
 .unified-toolbar-button,
