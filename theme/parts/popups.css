@@ -42,8 +42,8 @@ menulist {
 	margin: 0 !important;
 }
 
-menuitem:is([type="checkbox"], [checked="true"]) .menu-iconic-icon,
-menuitem[type="radio"] .menu-iconic-icon {
+menuitem:is([type="checkbox"], [checked="true"]) .menu-icon,
+menuitem[type="radio"] .menu-icon {
 	appearance: none !important;
 }
 menuitem:not(.menuitem-iconic) {
@@ -52,7 +52,7 @@ menuitem:not(.menuitem-iconic) {
 menuitem :is(label, description)[value][crop]::before {
 	min-width: min-content !important;
 }
-menuitem:not([acceltext]) .menu-accel-container {
+menuitem:not([acceltext]) .menu-accel {
 	visibility: collapse !important;
 }
 menuitem[type="checkbox"] image, menuitem[type="radio"] image {

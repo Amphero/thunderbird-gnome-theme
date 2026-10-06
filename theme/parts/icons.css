@@ -55,7 +55,7 @@ checkbox.treenode-checkbox > .checkbox-check,
 #attachmentToggle,
 .nav-button > .toolbarbutton-icon,
 menupopup > menu::after,
-.menu-iconic-icon,
+.menu-icon,
 .tab-close-button::before,
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-close .toolbarbutton-icon,
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-max .toolbarbutton-icon,
@@ -226,7 +226,7 @@ tr[data-properties~="junk"] .tree-button-spam > img:not(#hack) {
 }
 
 /* Fix icons sizes */
-.menu-iconic-icon,
+.menu-icon,
 link[href="chrome://global/skin/dropmarker.css"] + image,
 #calendarListHeader::after,
 #calendar-list > li[calendar-readonly]::after,
@@ -295,7 +295,7 @@ menuitem[type="checkbox"] {
 menuitem[type="checkbox"][checked="true"] {
 	list-style-image: var(--gnome-icon-select-symbolic) !important;
 }
-menuitem[type="checkbox"][disabled="true"] .menu-iconic-icon {
+menuitem[type="checkbox"][disabled="true"] .menu-icon {
 	opacity: 0.5;
 }
 
@@ -306,11 +306,11 @@ menuitem[type="radio"] {
 menuitem[type="radio"][checked="true"] {
 	list-style-image: var(--gnome-icon-bullet-symbolic) !important;
 }
-menuitem[type="radio"] .menu-iconic-icon {
+menuitem[type="radio"] .menu-icon {
 	border-radius: 100%;
 	border: 1px solid var(--gnome-toolbar-icon-fill);
 }
-menuitem[type="radio"][disabled="true"] .menu-iconic-icon {
+menuitem[type="radio"][disabled="true"] .menu-icon {
 	opacity: 0.5;
 }
 
