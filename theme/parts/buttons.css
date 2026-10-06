@@ -293,7 +293,7 @@ button.button-menu-list {
 }
 
 /* Compact buttons */
-.thread-card-last-row .button,
+.thread-card-dynamic-row .button,
 #threadTree tr.card-layout .tree-button-more,
 #offline-status,
 #spacesToolbarReveal,
