@@ -85,14 +85,18 @@ panel {
 
 /* Menu buttons */
 menuitem, menupopup menu,
+/* The rows of a popover follow the same radius and height as the rows of a
+ * menu, a list or the tab bar. Thunderbird also puts an 8px gap under every
+ * one of them, which pulls the popover apart. */
 panelview .subviewbutton,
 panelview .toolbarbutton-1 {
 	-moz-appearance: none !important;
-	border-radius: 6px !important;	
+	border-radius: var(--gnome-button-radius) !important;
 	color: var(--gnome-window-color) !important;
 	font: menu !important;
 	padding: 4px 12px !important;
-	min-height: 32px !important;
+	min-height: var(--gnome-button-size) !important;
+	margin: 0 var(--gnome-menu-padding) !important;
 }
 
 #appMenu-mainView .panel-subview-body > .subviewbutton-iconic:not([type="checkbox"]) > .toolbarbutton-icon {
@@ -149,7 +153,11 @@ toolbarseparator, menuseparator {
 
 toolbarseparator:not([orient="vertical"]), menupopup menuseparator {
 	border-top: 1px solid var(--gnome-menu-separator-color) !important;
+	border-bottom: 0 !important;
+	height: 0 !important;
+	min-height: 0 !important;
 	margin: 6px 0 !important;
+	padding: 0 !important;
 }
 
 menuseparator {
