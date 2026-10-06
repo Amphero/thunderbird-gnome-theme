@@ -165,7 +165,7 @@ tab {
 tab:not([pinned]) .tab-label-container {
 	margin-right: -16px !important;
 }
-tab:not([pinned]):is([selected="true"], :hover) .tab-label-container[textoverflow="true"] {
+tab:not([pinned]):is([selected], :hover) .tab-label-container[textoverflow="true"] {
 	margin-right: 0 !important;
 }
 tab:not(.tabmail-tab:first-child) .tab-icon-image {
@@ -214,7 +214,7 @@ tab:not(.tabmail-tab:first-child) .tab-icon-image {
 }
 
 /* Autohide */
-tab:not([selected="true"]) .tab-close-button {
+tab:not([selected]) .tab-close-button {
 	visibility: hidden !important;
 	opacity: 0 !important;
 }
@@ -240,13 +240,13 @@ tab:not([pinned]) .tab-content::before {
 	background: linear-gradient(to left, var(--gnome-tabbar-tab-close-overlay-bg) 50%, transparent);
 	z-index: 99;
 }
-tab:not([pinned]):is([selected="true"], :hover) .tab-content::before {
+tab:not([pinned]):is([selected], :hover) .tab-content::before {
 	opacity: 1;
 }
-tab:not([pinned])[selected="true"] .tab-content::before {
+tab:not([pinned])[selected] .tab-content::before {
 	--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-active-background);
 }
-tab:not([pinned], :-moz-window-inactive)[selected="true"]:hover .tab-content::before {
+tab:not([pinned], :-moz-window-inactive)[selected]:hover .tab-content::before {
 	--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-active-hover-background);
 }
 tab:not([pinned]):hover .tab-content::before {
@@ -259,26 +259,26 @@ tab:not([pinned]):hover .tab-content::before {
 }
 
 /* Active tab */
-.tab-background[selected=true] {
+.tab-background[selected] {
 	background: none !important;
 	border-image: none !important;
 }
-.tab-background[selected=true]  {
+.tab-background[selected]  {
 	background-color: var(--gnome-tabbar-tab-active-background) !important;
 }
 
-.tabmail-tab[selected="true"] {
+.tabmail-tab[selected] {
 	box-shadow: none !important;
 }
 
 /* Tab hover */
-tab:hover > .tab-stack > .tab-background[selected=true]:not(:-moz-window-inactive) {
+tab:hover > .tab-stack > .tab-background[selected]:not(:-moz-window-inactive) {
 	background-color: var(--gnome-tabbar-tab-active-hover-background) !important;
 }
-tab:hover > .tab-stack > .tab-background:not([selected=true]) {
+tab:hover > .tab-stack > .tab-background:not([selected]) {
 	background-color: transparent !important;
 }
-tab:hover > .tab-stack > .tab-background:not([selected=true]) {
+tab:hover > .tab-stack > .tab-background:not([selected]) {
 	background-color: var(--gnome-tabbar-tab-hover-background) !important;
 	border-image: none !important;
 }
@@ -337,10 +337,10 @@ tab {
 
 /* OPTIONAL: Add more contrast to the active tab */
 @media (-moz-bool-pref: "gnomeTheme.activeTabContrast") {
-	.tab-background[selected=true]:not(#hack) {
+	.tab-background[selected]:not(#hack) {
 		background: var(--gnome-tabbar-tab-active-background-contrast) !important;
 	}
-	tab:not([pinned])[selected="true"] .tab-content::before,
+	tab:not([pinned])[selected] .tab-content::before,
 	:root:not(:-moz-window-inactive) tab:hover .tab-content::before {
 		--gnome-tabbar-tab-close-overlay-bg: var(--gnome-tabbar-tab-active-background-contrast) !important;
 	}
