@@ -116,13 +116,21 @@ calendar-minimonth {
 }
 
 .minimonth-day {
+	/* The busy dot is a block below the digit and takes its own size plus a
+	 * 2px gap off the bottom of the cell, which left the digit above the
+	 * middle of its circle. Half of that has to go back on top. */
+	--gnome-minimonth-day-shift: calc((var(--mmDayBusyIndicatorSize) + 2px) / 2);
 	border: 0 !important;
 	border-radius: 100% !important;
-	padding: 9px 0 !important;
+	padding: calc(9px + var(--gnome-minimonth-day-shift)) 0
+		calc(9px - var(--gnome-minimonth-day-shift)) !important;
 }
-.minimonth-week,
-.minimonth-week:not([hidden]) ~ .minimonth-day {
+.minimonth-week {
 	padding: 5.5px 0 !important;
+}
+.minimonth-week:not([hidden]) ~ .minimonth-day {
+	padding: calc(5.5px + var(--gnome-minimonth-day-shift)) 0
+		calc(5.5px - var(--gnome-minimonth-day-shift)) !important;
 }
 
 .minimonth-day[today="true"] {
@@ -194,6 +202,10 @@ calendar-minimonth {
 	background-color: var(--gnome-button-background) !important;
 	border: 0 !important;
 	padding: 6px 9px !important;
+	/* Thunderbird writes this button in --selected-item-text-color, which
+	 * belongs on the accent. The row behind it carries a neutral tint here,
+	 * so the label was white on a light surface. */
+	color: var(--gnome-window-color) !important;
 }
 #calendar-list > li > button.calendar-enable-button:hover {
 	background-color: var(--gnome-button-hover-background) !important;
