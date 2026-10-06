@@ -63,6 +63,34 @@
 	--treeitem-background-selected: var(--gnome-active-color) !important;
 	--treeitem-background-active: var(--gnome-active-color) !important;
 
+	/* Thunderbird mixes the selection of trees and cards from
+	 * --selected-item-color, which is the accent. The theme marks a selection
+	 * with a neutral tint everywhere else, so these follow suit; the accent
+	 * stays on buttons, the calendar and the focus ring. */
+	--tree-card-background-current: var(--gnome-hover-color) !important;
+	--tree-card-background-selected: var(--gnome-active-color) !important;
+	--tree-card-background-selected-current: var(--gnome-active-color) !important;
+	--tree-card-background-current-unfocused: var(--gnome-hover-color) !important;
+	--tree-card-background-selected-unfocused: var(--gnome-active-color) !important;
+	--tree-card-background-selected-current-unfocused: var(--gnome-active-color) !important;
+	--tree-card-border-hover: transparent !important;
+	--tree-card-border-selected: transparent !important;
+	--tree-card-border-focus: var(--gnome-focus-border-color) !important;
+
+	/* Same for the rows of the folder tree, which Thunderbird mixes from
+	 * --selected-item-color through the --list-container-* family. */
+	--list-container-background-hover: var(--gnome-hover-color) !important;
+	--list-container-background-selected: var(--gnome-selected-color) !important;
+	--list-container-background-selected-current: var(--gnome-active-color) !important;
+	--list-container-background-selected-focused: var(--gnome-selected-color) !important;
+	--list-container-background-selected-current-focused: var(--gnome-active-color) !important;
+	--list-container-border: transparent !important;
+	--list-container-border-hover: transparent !important;
+	--list-container-border-selected: transparent !important;
+	--list-container-border-selected-current: transparent !important;
+	--list-container-border-selected-focused: transparent !important;
+	--list-container-border-selected-current-focused: transparent !important;
+
 	--listbox-hover: var(--gnome-hover-color) !important;
 	--listbox-selected-bg: var(--gnome-selected-color) !important;
 	--listbox-focused-selected-bg: var(--gnome-selected-color) !important;
