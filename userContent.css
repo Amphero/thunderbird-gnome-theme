@@ -118,6 +118,52 @@ span#summarySubtitle {
 		opacity: 0.5 !important;
 	}
 
+	/* The search field is a platform entry here: white, a 1px border and 3px
+	 * corners, where the same widget in the chrome is filled and rounded. */
+	input:not([type="checkbox"], [type="radio"]) {
+		/* Without this the native search widget keeps painting its own white
+		 * box and border over everything set below. */
+		appearance: none !important;
+		background: var(--gnome-entry-background) !important;
+		border: 0 !important;
+		border-radius: var(--gnome-entry-radius) !important;
+		box-shadow: none !important;
+		color: var(--gnome-entry-color) !important;
+		outline: 2px solid transparent !important;
+		padding: 6px 9px !important;
+		transition: outline 0.3s, outline-offset 0.3s;
+	}
+	input:not([type="checkbox"], [type="radio"]):focus {
+		outline: 2px solid var(--gnome-focused-urlbar-border-color) !important;
+		outline-offset: -2px;
+	}
+
+	/* Icon fill
+	 *
+	 * Thunderbird fills these icons at 20% and draws a stroke around them; the
+	 * Adwaita icons have no stroke, so they came out pale. The chrome side
+	 * gives every icon a solid fill, and theme/parts/icons.css does not reach
+	 * this page. */
+	.bookRow-icon,
+	.listRow-icon {
+		fill: currentColor !important;
+		-moz-context-properties: fill, fill-opacity !important;
+	}
+	button {
+		fill: var(--gnome-toolbar-icon-fill) !important;
+		-moz-context-properties: fill, fill-opacity !important;
+	}
+	button.button-primary {
+		fill: white !important;
+	}
+
+	/* Thunderbird sets a field label in uppercase at 600. */
+	.entry-type {
+		font-weight: normal !important;
+		opacity: 0.7 !important;
+		text-transform: none !important;
+	}
+
 	#detailsPane {
 		background-color: var(--gnome-window-background) !important;
 	}

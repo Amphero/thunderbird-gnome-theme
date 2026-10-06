@@ -9,11 +9,11 @@ input:not([type="checkbox"], [inputmode="search"], .input-pill),
 	background: var(--gnome-entry-background) !important;
 	outline: 2px solid transparent !important;
 	border: 0 !important;
-	border-radius: 8px !important;
+	border-radius: var(--gnome-entry-radius) !important;
 	box-shadow: none !important;
 	color: var(--gnome-entry-color) !important;
-	height: 34px !important;
-	max-height: 34px !important;
+	height: var(--gnome-entry-height) !important;
+	max-height: var(--gnome-entry-height) !important;
 	margin: 0 !important;
 	padding: 6px 9px !important;
 	box-sizing: border-box;
@@ -91,12 +91,12 @@ link[href="chrome://messenger/skin/shared/search-bar.css"] + form > input {
 }
 
 link[href="chrome://messenger/skin/shared/search-bar.css"] + form {
-	height: 34px !important;
-	max-height: 34px !important;
+	height: var(--gnome-entry-height) !important;
+	max-height: var(--gnome-entry-height) !important;
 }
 
 link[href="chrome://messenger/skin/shared/search-bar.css"] + form:focus-within {
-	border-radius: 8px !important;
+	border-radius: var(--gnome-entry-radius) !important;
 	outline: 2px solid var(--gnome-focused-urlbar-border-color) !important;
 	outline-offset: -2px !important;
 }
