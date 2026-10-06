@@ -1,6 +1,7 @@
 {
   "icons": [
     "address-book-symbolic",
+    "alarm-symbolic",
     "application-x-addon-symbolic",
     "applications-engineering-symbolic",
     "audio-volume-muted-symbolic",
@@ -13,9 +14,11 @@
     "channel-secure-symbolic",
     "chat-symbolic",
     "chat-bubbles-text-symbolic",
+    "checkbox-symbolic",
     "columns-symbolic",
     "controls-big-symbolic",
     "dialog-question-symbolic",
+    "dialog-warning-symbolic",
     "edit-symbolic",
     "edit-clear-symbolic",
     "edit-copy-symbolic",
@@ -95,6 +98,8 @@
     "user-trash-symbolic",
     "view-fullscreen-symbolic",
     "view-more-symbolic",
+    "view-sort-ascending-symbolic",
+    "view-sort-descending-symbolic",
     "view-more-horizontal-symbolic",
     "view-refresh-symbolic",
     "view-restore-symbolic",

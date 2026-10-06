@@ -139,6 +139,14 @@ menuitem[type="radio"][checked="true"] {
 	--icon-new-event: var(--gnome-icon-calendar-new-symbolic) !important;
 	--icon-tasks: var(--gnome-icon-tasks-symbolic) !important;
 	--icon-new-task: var(--gnome-icon-tasks-new-symbolic) !important;
+	--icon-calander: var(--gnome-icon-x-office-calendar-symbolic) !important;
+	--icon-calendar-imip: var(--gnome-icon-x-office-calendar-symbolic) !important;
+	--icon-calendar-empty: var(--gnome-icon-x-office-calendar-symbolic) !important;
+	--icon-clock: var(--gnome-icon-preferences-system-time-symbolic) !important;
+	--icon-bell: var(--gnome-icon-alarm-symbolic) !important;
+	--icon-bell-ring: var(--gnome-icon-alarm-symbolic) !important;
+	--icon-priority: var(--gnome-icon-go-up-symbolic) !important;
+	--icon-priority-low: var(--gnome-icon-go-down-symbolic) !important;
 	--icon-chat: var(--gnome-icon-chat-bubbles-text-symbolic) !important;
 	--icon-rss: var(--gnome-icon-newspaper-symbolic) !important;
 	--icon-sync: var(--gnome-icon-update-symbolic) !important;
@@ -163,6 +171,15 @@ menuitem[type="radio"][checked="true"] {
 	--icon-offline: var(--gnome-icon-network-offline-symbolic) !important;
 	--icon-settings: var(--gnome-icon-settings-symbolic) !important;
 	--icon-new-indicator: var(--gnome-icon-bullet-symbolic) !important;
+	--icon-circle-small: var(--gnome-icon-bullet-symbolic) !important;
+	--icon-checkbox: var(--gnome-icon-checkbox-symbolic) !important;
+	--icon-add-md: var(--gnome-icon-list-add-symbolic) !important;
+	--icon-mail-sm: var(--gnome-icon-mail-unread-symbolic) !important;
+	--icon-warning: var(--gnome-icon-dialog-warning-symbolic) !important;
+	--icon-warning-sm: var(--gnome-icon-dialog-warning-symbolic) !important;
+	--icon-warning-dialog: var(--gnome-icon-dialog-warning-symbolic) !important;
+	--icon-ascending-xs: var(--gnome-icon-view-sort-ascending-symbolic) !important;
+	--icon-descending-xs: var(--gnome-icon-view-sort-descending-symbolic) !important;
 	--icon-close: var(--gnome-icon-window-close-symbolic) !important;
 	--icon-check: var(--gnome-icon-select-symbolic) !important;
 	--icon-tentative: var(--gnome-icon-dialog-question-symbolic) !important;
@@ -320,6 +337,16 @@ menupopup > menu::after {
 link[href="chrome://global/skin/dropmarker.css"] + image {
 	 list-style-image: var(--gnome-icon-pan-down-symbolic) !important;
 }
+/* A menulist now draws its own marker as content on a bare <dropmarker>,
+ * without the image the rule above replaces. */
+menulist dropmarker,
+.button-menu-dropmarker {
+	content: var(--gnome-icon-pan-down-symbolic) !important;
+	-moz-context-properties: fill, fill-opacity !important;
+	fill: var(--gnome-toolbar-icon-fill) !important;
+	height: 16px !important;
+	width: 16px !important;
+}
 .toolbarbutton-menu-dropmarker {
 	content: var(--gnome-icon-pan-down-symbolic) !important;
 }
@@ -410,4 +437,41 @@ tr:not([data-properties~="flagged"]) .button-star {
 /* Collapse */
 #spacesToolbarReveal {
 	background-image: var(--gnome-icon-last-symbolic) !important;
+}
+
+/* Tab icons */
+/* A tab sets its icon as the src of an <img> from its own code, not through an
+ * icon token, so these stayed on Thunderbird's set. */
+.tab-icon-image {
+	-moz-context-properties: fill, fill-opacity !important;
+	fill: var(--gnome-toolbar-icon-fill) !important;
+}
+.tab-icon-image[src$="/compact/folder.svg"] {
+	content: var(--gnome-icon-folder-symbolic) !important;
+}
+.tab-icon-image[src$="/compact/calendar.svg"] {
+	content: var(--gnome-icon-x-office-calendar-symbolic) !important;
+}
+.tab-icon-image[src$="/compact/tasks.svg"] {
+	content: var(--gnome-icon-tasks-symbolic) !important;
+}
+.tab-icon-image[src$="/compact/address-book.svg"] {
+	content: var(--gnome-icon-address-book-symbolic) !important;
+}
+.tab-icon-image[src$="/compact/chat.svg"],
+.tab-icon-image[src$="/compact/conversation.svg"] {
+	content: var(--gnome-icon-chat-bubbles-text-symbolic) !important;
+}
+.tab-icon-image[src$="/compact/account-settings.svg"],
+.tab-icon-image[src$="/compact/settings.svg"] {
+	content: var(--gnome-icon-settings-symbolic) !important;
+}
+.tab-icon-image[src$="/compact/extension.svg"] {
+	content: var(--gnome-icon-application-x-addon-symbolic) !important;
+}
+.tab-icon-image[src$="/compact/draft.svg"] {
+	content: var(--gnome-icon-rich-text-symbolic) !important;
+}
+.tab-icon-image[src$="/compact/search.svg"] {
+	content: var(--gnome-icon-edit-find-symbolic) !important;
 }

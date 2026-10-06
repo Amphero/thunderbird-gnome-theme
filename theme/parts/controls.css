@@ -141,3 +141,15 @@ treecolpicker,
 		background-color: var(--gnome-active-color) !important;
 	}
 }
+
+/* The sort indicator and the column picker are addressed by URL, not through
+ * the icon tokens, so they kept the platform glyphs. */
+.treecol-sortdirection {
+	list-style-image: var(--gnome-icon-view-sort-ascending-symbolic) !important;
+}
+treecol[sortDirection="descending"] > .treecol-sortdirection {
+	list-style-image: var(--gnome-icon-view-sort-descending-symbolic) !important;
+}
+.tree-columnpicker-button {
+	list-style-image: var(--gnome-icon-columns-symbolic) !important;
+}
