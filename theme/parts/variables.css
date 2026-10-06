@@ -115,8 +115,17 @@
 	--listbox-focused-selected-bg: var(--gnome-selected-color) !important;
 	--listbox-selected-color: var(--gnome-view-color) !important;
 	--listbox-border-radius: var(--gnome-button-radius) !important;
-	--list-container-background-hover: var(--gnome-hover-color)  !important;
-	--list-container-background-selected-current: var(--gnome-active-color) !important;
+
+}
+
+/* Thunderbird gives a tree or listbox row 26px. GNOME lists are roomier; a row
+ * there is as tall as a button. The compact and touch densities keep
+ * Thunderbird's own values.
+ *
+ * Only the folder tree: the message list measures its own rows to decide what
+ * to render, and a height it did not calculate leaves the cards empty. */
+:root:not([uidensity="compact"], [uidensity="touch"]) #folderTree {
+	--list-item-min-height: var(--gnome-button-size) !important;
 }
 
 :root .cui-widget-panel {

@@ -35,10 +35,11 @@
 #folderTree > li:not(:first-child) > .mode-container {
 	padding-top: 3px !important;
 }
+/* GNOME insets the rows of a sidebar from both edges, so the highlight sits
+ * in the list rather than running into the window chrome. */
 #folderTree .container {
 	border: 0 !important;
-	margin-inline: 0 !important;
-	margin: 1px 0 !important;
+	margin: 1px var(--gnome-toolbar-padding) !important;
 }
 #folderTree:focus-within li.selected > .container, #folderTree li.drop-target > .container {
 	color: var(--gnome-view-color) !important;
