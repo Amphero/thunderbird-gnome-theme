@@ -150,14 +150,6 @@ button.calview-toggle-item,
 	}
 }
 
-/* Buttons with destructive action */
-#PanelUI-panic-view-button {
-	--gnome-button-background: var(--gnome-button-destructive-background) !important;
-	--gnome-button-hover-background: var(--gnome-button-destructive-hover-background) !important;
-	--gnome-button-active-background: var(--gnome-button-destructive-active-background) !important;
-	color: var(--gnome-destructive) !important;
-}
-
 /* Buttons with margins */
 .message-header-view-button:not([is="toolbarbutton-menu-button"]),
 toolbar .toolbarbutton-1,
@@ -232,11 +224,6 @@ button.button-menu-list {
 		padding: 2px 15px !important;
 		padding-inline-start: calc(9px * 1.5 + var(--icon-size)) !important;
 	}
-}
-
-/* Circle buttons */
-.permission-popup-permission-remove-button:not(#hack) {
-	border-radius: 100% !important;
 }
 
 /* Combined buttons */

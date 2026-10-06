@@ -108,8 +108,7 @@ panelview .toolbarbutton-1 {
 
 /* Menu buttons disabled */
 menuitem[disabled="true"], menupopup menu[disabled="true"],
-.subviewbutton[disabled="true"], .toolbarbutton-1[disabled="true"],
-.identity-popup-content-blocking-category[disabled="true"] {
+.subviewbutton[disabled="true"], .toolbarbutton-1[disabled="true"] {
 	opacity: .5 !important;
 }
 menuitem[disabled="true"][_moz-menuactive], menupopup menu[disabled="true"][_moz-menuactive] {

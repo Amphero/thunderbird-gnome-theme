@@ -19,7 +19,6 @@ button.email-action-flagged#starMessageButton,
 .calendar-displayed,
 .miniday-nav-buttons,
 .today-pane-cycler,
-.notification-close,
 .subviewbutton-back .toolbarbutton-icon,
 .subviewbutton-iconic[type="checkbox"] > .toolbarbutton-icon,
 button.button-menu-list,
@@ -254,9 +253,7 @@ button.button-menu-list {
 treechildren::-moz-tree-twisty(selected, focus),
 treechildren::-moz-tree-twisty(selected, focus, open),
 treechildren::-moz-tree-image(selected, focus),
-treechildren::-moz-tree-image(selected, focus, open),
-.sidebar-panel[lwt-sidebar-brighttext] .sidebar-placesTreechildren::-moz-tree-twisty,
-.sidebar-panel[lwt-sidebar-brighttext] .sidebar-placesTreechildren::-moz-tree-twisty(open) {
+treechildren::-moz-tree-image(selected, focus, open) {
 	fill: #fff !important;
 }
 

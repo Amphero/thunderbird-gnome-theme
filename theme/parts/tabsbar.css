@@ -153,7 +153,7 @@ tab {
 }
 
 /* Prevent tab icons size breaking */
-.tab-icon-image, .tab-icon-sound, .tab-throbber, .tab-throbber-fallback, .tab-close-button {
+.tab-icon-image, .tab-throbber, .tab-close-button {
 	min-width: 16px;
 }
 
@@ -168,7 +168,6 @@ tab:not([pinned]) .tab-label-container {
 tab:not([pinned]):is([selected="true"], :hover) .tab-label-container[textoverflow="true"] {
 	margin-right: 0 !important;
 }
-tab:not([pinned]) .tab-icon-stack,
 tab:not(.tabmail-tab:first-child) .tab-icon-image {
 	margin-left: auto !important;
 }
@@ -177,19 +176,14 @@ tab:not(.tabmail-tab:first-child) .tab-icon-image {
 }
 
 /* Tab icon margin */
-tab:not([pinned]) .tab-icon-stack,
 .tabmail-tab .tab-icon-image {
 	margin-right: 6px !important;
 }
-.tab-throbber:not([pinned]), .tab-icon-pending:not([pinned]), .tab-sharing-icon-overlay:not([pinned]), .tab-icon-overlay:not([pinned]) {
+.tab-throbber:not([pinned]) {
 	margin-inline-end: 0 !important;
-}
-tab:not([soundplaying], [muted], [activemedia-blocked], [crashed]) .tab-icon-stack {
-	padding: 4px;
 }
 
 /* Tab buttons */
-.tab-icon-overlay,
 .tab-close-button {
 	border: 0px solid transparent;
 	box-sizing: content-box; /* Avoid deformation on flexbox */
@@ -198,18 +192,13 @@ tab:not([soundplaying], [muted], [activemedia-blocked], [crashed]) .tab-icon-sta
 	background-size: 24px;
 	transition: all 0.2s ease-out !important;
 }
-:root:not(:-moz-window-inactive) .tab-icon-overlay:hover,
 :root:not(:-moz-window-inactive) .tab-close-button:hover {
 	background-color: var(--gnome-hover-color) !important;
 }
-:root:not(:-moz-window-inactive) .tab-icon-overlay:active,
 :root:not(:-moz-window-inactive) .tab-close-button:active {
 	background-color: var(--gnome-active-color) !important;
 }
 
-.tab-icon-stack:is([soundplaying], [muted], [activemedia-blocked]) image {
-	 margin: auto !important;
-}
 
 /* Close tab button */
 .tab-close-button {
@@ -234,10 +223,6 @@ tab:hover .tab-close-button {
 	opacity: 1 !important;
 }
 
-/* Fix close button position */
-#tabbrowser-tabs[closebuttons="activetab"] .tabmail-tab:not([pinned]) .tab-close-button {
-	display: block !important;
-}
 
 /* Close button overlay */
 tab:not([pinned], .tabmail-tab:first-child) .tab-content::before {
@@ -269,7 +254,7 @@ tab:not([pinned]):hover .tab-content::before {
 }
 
 /* Tab close button etc. positioning */
-.tab-throbber, .tab-icon-image, .tab-sharing-icon-overlay, .tab-icon-sound, .tab-close-button {
+.tab-throbber, .tab-icon-image, .tab-close-button {
 	margin-top: 0 !important;
 }
 
@@ -290,9 +275,7 @@ tab:not([pinned]):hover .tab-content::before {
 tab:hover > .tab-stack > .tab-background[selected=true]:not(:-moz-window-inactive) {
 	background-color: var(--gnome-tabbar-tab-active-hover-background) !important;
 }
-tab:hover > .tab-stack > .tab-background:not([selected=true]),
-#TabsToolbar[brighttext] > #tabbrowser-tabs > .tabmail-tab:hover > .tab-stack > .tab-background:not([selected=true]),
-#TabsToolbar[brighttext] > #tabbrowser-tabs > .tabmail-tab:hover > .tab-stack > .tab-background > .tab-line:not([selected=true]) {
+tab:hover > .tab-stack > .tab-background:not([selected=true]) {
 	background-color: transparent !important;
 }
 tab:hover > .tab-stack > .tab-background:not([selected=true]) {
@@ -354,8 +337,7 @@ tab {
 
 /* OPTIONAL: Add more contrast to the active tab */
 @media (-moz-bool-pref: "gnomeTheme.activeTabContrast") {
-	.tab-background[selected=true]:not(#hack),
-	:root:not(:-moz-window-inactive) .tabbrowser-tab:hover > .tab-stack > .tab-background:not(#hack) {
+	.tab-background[selected=true]:not(#hack) {
 		background: var(--gnome-tabbar-tab-active-background-contrast) !important;
 	}
 	tab:not([pinned])[selected="true"] .tab-content::before,
