@@ -56,20 +56,13 @@ toolbar input:not([type="checkbox"], [inputmode="search"]),
 }
 
 /* Entry button */
-.identity-box-button,
-#tracking-protection-icon-container,
 #notification-popup-box,
-.urlbar-page-action,
 .urlbar-icon {
 	fill-opacity: 0.8 !important;
 	transition: fill 0.3s, fill-opacity 0.3, opacity 0.3;
 }
 
-.identity-box-button:hover:not([open="true"]),
-#tracking-protection-icon-container:hover:not([open="true"]),
 #notification-popup-box:hover:not([open="true"]),
-.urlbar-page-action:hover:not([open="true"]),
-.urlbar-page-action:hover:not([open="true"]) .urlbar-icon,
 .urlbar-icon:not([disabled]):hover {
     background: none !important;
 	fill-opacity: 1 !important;	
