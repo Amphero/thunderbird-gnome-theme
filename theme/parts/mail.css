@@ -45,6 +45,11 @@
 	outline: 2px solid color-mix(in srgb, var(--gnome-accent) 50%, transparent) !important;
 	outline-offset: -2px !important;
 }
+/* The account rows take their icon colour from --primary, not from the
+ * folder colours, so they stayed blue. */
+#folderTree li[data-server-type] > .container > .icon {
+	--icon-color: currentColor !important;
+}
 #folderTree li > .container > .unread-count {
 	background-color: var(--folderpane-unread-count-background) !important;
 	color: var(--folderpane-unread-count-text) !important;

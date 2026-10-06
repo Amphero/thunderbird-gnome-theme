@@ -38,6 +38,25 @@
 	--selected-item-text-color: #ffffff !important;
 	
 	--new-folder-color: var(--gnome-accent) !important;
+
+	/* The folder icons are GNOME symbols already, but Thunderbird tints them
+	 * per folder type: blue inbox, yellow folder, teal outbox, purple drafts.
+	 * Adwaita draws symbolic icons in the text colour and keeps colour for
+	 * status, so only the two that carry a warning stay coloured. */
+	--folder-color-inbox: currentColor !important;
+	--folder-color-draft: currentColor !important;
+	--folder-color-sent: currentColor !important;
+	--folder-color-archive: currentColor !important;
+	--folder-color-trash: currentColor !important;
+	--folder-color-template: currentColor !important;
+	--folder-color-newsletter: currentColor !important;
+	--folder-color-rss: currentColor !important;
+	--folder-color-outbox: currentColor !important;
+	--folder-color-folder: currentColor !important;
+	--folder-color-folder-filter: currentColor !important;
+	--folder-color-folder-rss: currentColor !important;
+	--folder-color-spam: var(--gnome-error) !important;
+	--folder-color-warning: var(--gnome-error) !important;
 	--button-margin: 0 calc(var(--gnome-toolbar-spacing) / 2) !important;
 
 	--spaces-padding: var(--gnome-toolbar-padding) !important;
