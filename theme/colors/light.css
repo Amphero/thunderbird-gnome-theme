@@ -142,9 +142,12 @@
 	--gnome-tabbar-background: var(--gnome-headerbar-background);
 	--gnome-tabbar-tab-separator-color: var(--gnome-border-color);
 	--gnome-tabbar-tab-hover-background: color-mix(in srgb, currentColor 7%, var(--gnome-tabbar-background));
-	--gnome-tabbar-tab-active-background: color-mix(in srgb, currentColor 10%, var(--gnome-tabbar-background));
+	/* Thunderbird spreads a handful of tabs over the whole width, where the
+	 * 10% of a browser tab is hard to make out. The selected tab takes the
+	 * strength the theme uses for a selection elsewhere. */
+	--gnome-tabbar-tab-active-background: color-mix(in srgb, currentColor 16%, var(--gnome-tabbar-background));
 	--gnome-tabbar-tab-active-background-contrast: color-mix(in srgb, currentColor 20%, var(--gnome-tabbar-background));
-	--gnome-tabbar-tab-active-hover-background: color-mix(in srgb, currentColor 13%, var(--gnome-tabbar-background));
+	--gnome-tabbar-tab-active-hover-background: color-mix(in srgb, currentColor 19%, var(--gnome-tabbar-background));
 	--gnome-tabbar-tab-needs-attetion: var(--gnome-palette-blue-2);
 	
 	--gnome-tabbar-identity-color-blue: #0461be;
