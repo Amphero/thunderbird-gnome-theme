@@ -96,9 +96,10 @@
 	background: transparent !important;
 	height: auto !important;
 	
-	/* Spacing */
+	/* Spacing: the same gutter the folder tree uses, so both lists sit in the
+	 * window the same way. */
 	td {
-		padding: 12px 12px !important;
+		padding: var(--gnome-toolbar-padding) !important;
 	}
 	&:not(:first-child) td {
 		padding-top: 0 !important;
@@ -109,7 +110,7 @@
 		--thread-card-content-gap: 6px !important;
 		background: none !important;
 		border: 0 !important;
-		border-radius: 6px !important;
+		border-radius: var(--gnome-button-radius) !important;
 		grid-template-columns: 1fr !important;
 		min-height: 60px !important;
 
