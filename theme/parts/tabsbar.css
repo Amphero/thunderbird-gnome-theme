@@ -4,11 +4,9 @@
 
 :root {
 	--tabs-toolbar-box-shadow: none !important;
-	--space-above-tabbar: 0 !important;
 }
 
 #tabs-toolbar {
-    --toolbarbutton-inner-padding: var(--toolbarbutton-inner-padding) !important;
 	background-color: var(--gnome-tabbar-background) !important;
 	padding: 0 !important;
 	position: relative;

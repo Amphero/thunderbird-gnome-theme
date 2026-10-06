@@ -167,7 +167,6 @@ menuitem[type="radio"][checked="true"] {
 	--icon-online: var(--gnome-icon-network-transmit-receive-symbolic) !important;
 	--icon-offline: var(--gnome-icon-network-offline-symbolic) !important;
 	--icon-settings: var(--gnome-icon-settings-symbolic) !important;
-	--icon-unread-dot: var(--gnome-icon-bullet-symbolic) !important;
 	--icon-new-indicator: var(--gnome-icon-bullet-symbolic) !important;
 	--icon-close: var(--gnome-icon-window-close-symbolic) !important;
 	--icon-check: var(--gnome-icon-select-symbolic) !important;
@@ -409,7 +408,6 @@ treechildren::-moz-tree-image(query, OrganizerQuery_history____v) {
 tr:not([data-properties~="flagged"]) .tree-view-row-flag > .tree-button-flag > img,
 tr:not([data-properties~="flagged"]) .button-star {
 	--icon-star: var(--gnome-icon-non-starred-symbolic) !important;
-	--icon-sta-sm: var(--gnome-icon-non-starred-symbolic) !important;
 }
 
 /* Cancel icon */

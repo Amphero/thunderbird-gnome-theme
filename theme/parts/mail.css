@@ -4,7 +4,6 @@
 
 :root {
 	--thread-pane-header-padding: var(--gnome-toolbar-padding) !important;
-	--folder-tree-header-padding: var(--gnome-toolbar-padding) !important;
 }
 
 #folderPaneHeaderBar:not([hidden]) {

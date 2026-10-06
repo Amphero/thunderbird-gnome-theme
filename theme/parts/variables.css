@@ -38,13 +38,11 @@
 	--spaces-padding: var(--gnome-toolbar-padding) !important;
 	--spaces-container-gap: var(--gnome-toolbar-spacing) !important;
 	--spaces-bg-color: var(--gnome-window-background) !important;
-	--spaces-border-color: var(--gnome-sidebar-border-color) !important;
 	--spaces-total-width: calc(2 * var(--spaces-padding) + var(--gnome-button-size) + var(--messenger-body-border)) !important;
 	
 	--sidebar-header-spacing: var(--gnome-toolbar-padding) !important;
 	--sidebar-background-color: var(--gnome-sidebar-background) !important;
 	--sidebar-border-color: color-mix(in srgb, var(--gnome-window-color) 15%, transparent) !important;
-	--splitter-color: var(--gnome-sidebar-border-color) !important;
 
 	--viewBorderColor: color-mix(in srgb, currentColor 8%, transparent) !important;
 	--viewBackground: var(--gnome-view-background) !important;
@@ -56,7 +54,6 @@
 
 	--tree-view-bg: var(--gnome-view-background) !important;
 	--tree-view-color: var(--gnome-view-color) !important;
-	--treeitem-border-radius: var(--gnome-button-radius) !important;
 	--treeitem-background-hover: var(--gnome-hover-color)  !important;
 	--treeitem-background-selected: var(--gnome-active-color) !important;
 	--treeitem-background-active: var(--gnome-active-color) !important;
