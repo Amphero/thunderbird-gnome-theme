@@ -62,6 +62,11 @@
 	--spaces-padding: var(--gnome-toolbar-padding) !important;
 	--spaces-container-gap: var(--gnome-toolbar-spacing) !important;
 	--spaces-bg-color: var(--gnome-window-background) !important;
+	/* Thunderbird fills the current space with --selected-item-color and puts
+	 * white on it, which this theme points at the accent; the icon stayed
+	 * dark on top of it. A selection is a neutral tint everywhere else. */
+	--spaces-button-active-bg-color: var(--gnome-active-color) !important;
+	--spaces-button-active-text-color: var(--gnome-window-color) !important;
 	--spaces-total-width: calc(2 * var(--spaces-padding) + var(--gnome-button-size) + var(--messenger-body-border)) !important;
 	
 	--sidebar-header-spacing: var(--gnome-toolbar-padding) !important;
