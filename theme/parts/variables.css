@@ -29,8 +29,13 @@
 
 /* Overwrite Thunderbird's variables */
 :root {
-	--selected-item-color: var(--gnome-active-color) !important;
-	--selected-item-text-color: var(--gnome-window-color) !important;
+	/* Thunderbird treats this as the accent: it feeds
+	 * --button-primary-background-color and from there --color-accent-primary,
+	 * and the calendar reads it in 188 places for events, the today pane and
+	 * accent-color. Pointed at a neutral tint, all of that came out grey.
+	 * Selected rows have their own variables further down. */
+	--selected-item-color: var(--gnome-accent-bg) !important;
+	--selected-item-text-color: #ffffff !important;
 	
 	--new-folder-color: var(--gnome-accent) !important;
 	--button-margin: 0 calc(var(--gnome-toolbar-spacing) / 2) !important;
