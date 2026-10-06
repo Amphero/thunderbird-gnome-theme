@@ -140,6 +140,9 @@
 
 :root[customtitlebar] #titlebar .titlebar-button > .toolbarbutton-icon {
 	appearance: none !important;
+	/* The icon carries a tint of its own, which stacked with the one on the
+	 * button and drew a second, darker circle inside the first. */
+	background: none !important;
 	height: 16px !important;
 	padding: 0 !important;
 	stroke: none !important;
@@ -149,9 +152,6 @@
 
 :root[customtitlebar] #titlebar .titlebar-button:not([disabled]):hover {
 	background: var(--gnome-button-hover-background) !important;
-}
-:root[customtitlebar] #titlebar .titlebar-button:hover > .toolbarbutton-icon {
-	background: none !important;
 }
 :root[customtitlebar] #titlebar .titlebar-button:not([disabled]):active {
 	background: var(--gnome-button-active-background) !important;
