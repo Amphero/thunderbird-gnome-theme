@@ -101,6 +101,7 @@ menuitem[type="radio"][checked="true"] {
 	--icon-draft: var(--gnome-icon-rich-text-symbolic) !important;
 	--icon-template: var(--gnome-icon-folder-templates-symbolic) !important;
 	--icon-sent: var(--gnome-icon-outbox-symbolic) !important;
+	--icon-outbox: var(--gnome-icon-mailbox-symbolic) !important;
 	--icon-archive: var(--gnome-icon-mail-archive-symbolic) !important;
 	--icon-trash: var(--gnome-icon-user-trash-symbolic) !important;
 	--icon-trash-sm: var(--gnome-icon-user-trash-symbolic) !important;
@@ -121,6 +122,15 @@ menuitem[type="radio"][checked="true"] {
 	--icon-star: var(--gnome-icon-starred-symbolic) !important;
 	--icon-star-sm: var(--gnome-icon-starred-symbolic) !important;
 	--icon-address-book: var(--gnome-icon-address-book-symbolic) !important;
+	--icon-new-address-book: var(--gnome-icon-address-book-new-symbolic) !important;
+	--icon-new-contact: var(--gnome-icon-contact-new-symbolic) !important;
+	--icon-contact: var(--gnome-icon-avatar-default-symbolic) !important;
+	--icon-user: var(--gnome-icon-avatar-default-symbolic) !important;
+	--icon-user-list: var(--gnome-icon-system-users-symbolic) !important;
+	--icon-new-user-list: var(--gnome-icon-system-users-symbolic) !important;
+	--icon-mail-list: var(--gnome-icon-system-users-symbolic) !important;
+	--icon-globe: var(--gnome-icon-web-browser-symbolic) !important;
+	--icon-import: var(--gnome-icon-folder-download-symbolic) !important;
 	--icon-attachment: var(--gnome-icon-mail-attachment-symbolic) !important;
 	--icon-attachment-sm: var(--gnome-icon-mail-attachment-symbolic) !important;
 	--icon-mail: var(--gnome-icon-mail-unread-symbolic) !important;
@@ -427,8 +437,10 @@ tr:not([data-properties~="flagged"]) .button-star {
 }
 
 /* Calendars list */
+/* There is no padlock-symbolic in the set, so this marker stayed empty.
+ * channel-secure-symbolic is the padlock. */
 #calendar-list > li[calendar-readonly]::before {
-	content: var(--gnome-icon-padlock-symbolic);
+	content: var(--gnome-icon-channel-secure-symbolic);
 }
 #calendar-list > li[calendar-muted]::after {
 	content: var(--gnome-icon-notifications-disabled-symbolic);
@@ -474,4 +486,21 @@ tr:not([data-properties~="flagged"]) .button-star {
 }
 .tab-icon-image[src$="/compact/search.svg"] {
 	content: var(--gnome-icon-edit-find-symbolic) !important;
+}
+
+/* Task list column headers and the calendar section twisty address their icons
+ * by URL, not through a token. */
+.treecol-icon[src$="/compact/checkbox.svg"] {
+	content: var(--gnome-icon-checkbox-symbolic) !important;
+}
+.treecol-icon[src$="/compact/priority.svg"] {
+	content: var(--gnome-icon-go-up-symbolic) !important;
+}
+#toggleCalendarIcon {
+	content: var(--gnome-icon-pan-down-symbolic) !important;
+}
+.treecol-icon,
+#toggleCalendarIcon {
+	-moz-context-properties: fill, fill-opacity !important;
+	fill: var(--gnome-toolbar-icon-fill) !important;
 }
