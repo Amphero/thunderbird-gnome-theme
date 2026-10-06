@@ -47,7 +47,7 @@
 	
 	--sidebar-header-spacing: var(--gnome-toolbar-padding) !important;
 	--sidebar-background-color: var(--gnome-sidebar-background) !important;
-	--sidebar-border-color: color-mix(in srgb, var(--gnome-window-color) 15%, transparent) !important;
+	--sidebar-border-color: var(--gnome-headerbar-shade-color) !important;
 
 	--viewBorderColor: color-mix(in srgb, currentColor 8%, transparent) !important;
 	--viewBackground: var(--gnome-view-background) !important;
