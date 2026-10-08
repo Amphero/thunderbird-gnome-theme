@@ -134,7 +134,7 @@ span#summarySubtitle {
 		transition: outline 0.3s, outline-offset 0.3s;
 	}
 	input:not([type="checkbox"], [type="radio"]):focus {
-		outline: 2px solid var(--gnome-focused-urlbar-border-color) !important;
+		outline: 2px solid var(--gnome-entry-focused-border-color) !important;
 		outline-offset: -2px;
 	}
 

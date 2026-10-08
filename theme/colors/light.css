@@ -164,6 +164,7 @@
 
 	/* Backdrop colors */
 	&:-moz-window-inactive {
+		--gnome-inactive-entry-color: color-mix(in srgb, var(--gnome-entry-color) 70%, transparent);
 		--gnome-headerbar-background: var(--gnome-window-background) !important;
 		--gnome-sidebar-background: #f2f2f4;
 		--gnome-secondary-sidebar-background: #f6f6fa;

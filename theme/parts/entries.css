@@ -27,7 +27,7 @@ input:not([type="checkbox"], [inputmode="search"], .input-pill),
 input:not([type="checkbox"], [inputmode="search"], .input-pill, link[href="chrome://messenger/skin/shared/search-bar.css"] + form > input):focus,
 .themeableSearchBox:focus,
 .address-pill.editing:not(#hack) {
-	outline: 2px solid var(--gnome-focused-urlbar-border-color) !important;
+	outline: 2px solid var(--gnome-entry-focused-border-color) !important;
 	outline-offset: -2px;
 }
 
@@ -97,7 +97,7 @@ link[href="chrome://messenger/skin/shared/search-bar.css"] + form {
 
 link[href="chrome://messenger/skin/shared/search-bar.css"] + form:focus-within {
 	border-radius: var(--gnome-entry-radius) !important;
-	outline: 2px solid var(--gnome-focused-urlbar-border-color) !important;
+	outline: 2px solid var(--gnome-entry-focused-border-color) !important;
 	outline-offset: -2px !important;
 }
 
