@@ -21,7 +21,7 @@ checkbox > .checkbox-check:not([checked]):hover {
 }
 checkbox > .checkbox-check[checked] {
 	background-color: var(--gnome-accent-bg) !important;
-	background-image: url("../icons/select-symbolic.svg") !important;
+	background-image: var(--gnome-icon-select-symbolic) !important;
 	background-size: 14px !important;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -48,7 +48,7 @@ radio > .radio-check:not([selected]):hover {
 }
 radio > .radio-check[selected] {
 	background-color: var(--gnome-accent-bg) !important;
-	list-style-image: url("../icons/bullet-symbolic.svg") !important;
+	list-style-image: var(--gnome-icon-bullet-symbolic) !important;
 	fill: white !important;
 	-moz-context-properties: fill;
 }
