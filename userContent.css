@@ -237,3 +237,96 @@ span#summarySubtitle {
 		--icon-close: var(--gnome-icon-window-close-symbolic) !important;
 	}
 }
+
+@-moz-document url("about:preferences") {
+	/* Another content document, so nothing from theme/parts reaches it:
+	 * buttons, entries and menulists keep the platform shape and the
+	 * checkboxes and radios are drawn as native widgets. */
+	button,
+	menulist {
+		appearance: none !important;
+		background-color: var(--gnome-button-background) !important;
+		border: 0 !important;
+		border-radius: var(--gnome-button-radius) !important;
+		box-shadow: none !important;
+		color: var(--gnome-window-color) !important;
+		min-height: var(--gnome-button-size) !important;
+	}
+	button:hover,
+	menulist:hover {
+		background-color: var(--gnome-button-hover-background) !important;
+	}
+	button:active,
+	menulist[open] {
+		background-color: var(--gnome-button-active-background) !important;
+	}
+	button[disabled],
+	menulist[disabled] {
+		opacity: 0.5 !important;
+	}
+
+	input:not([type="checkbox"], [type="radio"]) {
+		appearance: none !important;
+		background: var(--gnome-entry-background) !important;
+		border: 0 !important;
+		border-radius: var(--gnome-entry-radius) !important;
+		box-shadow: none !important;
+		color: var(--gnome-entry-color) !important;
+		min-height: var(--gnome-entry-height) !important;
+		padding: 6px 9px !important;
+	}
+
+	/* The chrome rules reach for ../icons/*.svg; the set is already here. */
+	checkbox > .checkbox-check,
+	radio > .radio-check {
+		appearance: none !important;
+		border: 0 !important;
+		height: 20px !important;
+		width: 20px !important;
+	}
+	checkbox > .checkbox-check {
+		border-radius: 6px !important;
+	}
+	radio > .radio-check {
+		border-radius: 50% !important;
+	}
+	checkbox > .checkbox-check:not([checked]),
+	radio > .radio-check:not([selected]) {
+		background-color: transparent !important;
+		box-shadow: inset 0 0 0 2px var(--gnome-trough-background);
+	}
+	checkbox > .checkbox-check:not([checked]):hover,
+	radio > .radio-check:not([selected]):hover {
+		box-shadow: inset 0 0 0 2px var(--gnome-trough-hover-background);
+	}
+	checkbox > .checkbox-check[checked],
+	radio > .radio-check[selected] {
+		background-color: var(--gnome-accent-bg) !important;
+		background-position: center;
+		background-repeat: no-repeat;
+		fill: white !important;
+		-moz-context-properties: fill;
+	}
+	checkbox > .checkbox-check[checked] {
+		background-image: var(--gnome-icon-select-symbolic) !important;
+		background-size: 14px !important;
+	}
+	radio > .radio-check[selected] {
+		background-image: var(--gnome-icon-bullet-symbolic) !important;
+		background-size: 14px !important;
+	}
+
+	/* Category list: rows like the folder tree */
+	#categories > richlistitem {
+		border: 0 !important;
+		border-radius: var(--gnome-button-radius) !important;
+		margin-inline: var(--gnome-toolbar-padding) !important;
+	}
+	#categories > richlistitem[selected] {
+		background-color: var(--gnome-active-color) !important;
+		color: inherit !important;
+	}
+	#categories > richlistitem:not([selected]):hover {
+		background-color: var(--gnome-hover-color) !important;
+	}
+}
